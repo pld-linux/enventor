@@ -1,15 +1,15 @@
-%define		efl_ver		1.8.0
-%define		elementary_ver	1.8.0
+%define		efl_ver		1.9.0
+%define		elementary_ver	1.9.0
 
 Summary:	Enventor - EDC editor with some convenient functions
 Summary(pl.UTF-8):	Enventor - edytor EDC z kilkoma wygodnymi funkcjami
 Name:		enventor
-Version:	0.1
+Version:	0.2.0
 Release:	1
 License:	BSD
 Group:		Applications/Network
 Source0:	http://download.enlightenment.org/rel/apps/enventor/%{name}-%{version}.tar.bz2
-# Source0-md5:	48b8826c557840336fe7110028ff5291
+# Source0-md5:	de1db71b0dd6ab8d0649714b39db6a65
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
@@ -44,7 +44,7 @@ Enventor is an EDC editor with some convenient functions.
 Enventor to edytor EDC z kilkoma wygodnymi funkcjami.
 
 %prep
-%setup -q -n %{name}-0.1.0
+%setup -q
 
 # non-themed icons go to pixmapsdir
 %{__sed} -i -e 's,/icons$,/pixmaps,' data/icon/Makefile.am
@@ -67,17 +67,13 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} $RPM_BUILD_ROOT%{_libdir}/enventorql.la
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README
+%doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/enventor
-%attr(755,root,root) %{_bindir}/enventorql
-%attr(755,root,root) %{_libdir}/enventorql.so
 %{_datadir}/enventor
 %{_desktopdir}/enventor.desktop
 %{_pixmapsdir}/enventor.png
