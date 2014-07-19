@@ -4,12 +4,12 @@
 Summary:	Enventor - EDC editor with some convenient functions
 Summary(pl.UTF-8):	Enventor - edytor EDC z kilkoma wygodnymi funkcjami
 Name:		enventor
-Version:	0.2.0
+Version:	0.3.0
 Release:	1
 License:	BSD
 Group:		Applications/Network
 Source0:	http://download.enlightenment.org/rel/apps/enventor/%{name}-%{version}.tar.bz2
-# Source0-md5:	de1db71b0dd6ab8d0649714b39db6a65
+# Source0-md5:	8566e8f6a95a1708d4142e1ec9590a7b
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
